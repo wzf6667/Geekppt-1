@@ -1,10 +1,10 @@
-﻿################################################################################
-# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
-################################################################################
-
-/CodeEvaluation/.vs/Project4/v16/Browse.VC.db
+﻿/CodeEvaluation/Debug
 /CodeEvaluation/x64/Debug
-/CodeEvaluation/.vs/Project4/v16/Browse.VC.opendb
-/CodeEvaluation/.vs/Project4/v16/Browse.VC.db-wal
-/CodeEvaluation/.vs/Project4/v16/Browse.VC.db-shm
-/CodeEvaluation/.vs/Project4/v16/ipch/AutoPCH/2e341ce82492c71b
+/.vs
+/CodeEvaluation/.vs/Project5/v16/.suo
+/CodeEvaluation/.vs/Project5/v16
+/CodeEvaluation/aa.docx
+/CodeEvaluation/sampleText1_input.txt
+/CodeEvaluation/sampleCode2_input.txt
+/CodeEvaluation/sampleCode2.exe
+/CodeEvaluation/sampleCode1.exe
