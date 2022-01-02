@@ -36,6 +36,7 @@ private:
     LanguageType language_;
     std::string address_;
     std::string filename_;
+    std::string compiler_;  // This private member added by qianhao, which indicates the compiler used.
 
 public:
     /* constructors */
@@ -43,31 +44,56 @@ public:
         language_(language), address_(address) {
         code_ = readTxt(address_);
         filename_ = extractFilename(address_);
+        // Qianhao, Default compiler
+        if (language == CPP) {
+            compiler_ = "g++";
+        }
+        else if (language == JAVA) {
+            compiler_ = "javac";
+        }
+        else {
+            compiler_ = "";
+        }
     }
 
+    /* overloading constructors */
+    CodeEvaluation(LanguageType language, std::string const& address, std::string const& compiler) :
+        language_(language), address_(address), compiler_(compiler) {
+        code_ = readTxt(address_);
+        filename_ = extractFilename(address_);
+    }
 
     /* helper func by HH,
        extract from absolute address the filename without suffix
        e.g. ./home/Admin/lecture_related/source.txt -> source */
     std::string extractFilename(std::string const& address);
 
-    // todo 1 Zifan Wang
-    /* read from a txt file and return its content as string
+
+    /**
+     * used to read TXT format file and store the information in string
+     *
+     * @param file address
+     *
+     * @return string which store the content of the input txt file
     */
     std::string readTxt(std::string address) const;
 
-    /* create a file with a certain language type suffix
-       and write code_ inside the file
-       e.g. address_ filename is 1.txt, language_ is CPP
-       should write to 1.cpp file in the same directory
-       return the filename of the file */
+    /**
+    * create a file with a certain language type suffix
+      and write code_ inside the file
+    *
+    * @return the filename of the file
+    */
     std::string createAndWriteFile();
 
-
-    /* change suffix .txt to certain type and return filename */
-
+    /**
+    * used to change the suffix of the given file which in txt format
+    *
+    * @param the wanted language such as python and java
+    *
+    * @return the filename of the file
+    */
     std::string changeSuffix(LanguageType language);
-
     // todo 2 Hao Huang
 
     /* if not use cmake, generate compile command from a certain language and compiler
@@ -83,9 +109,7 @@ public:
 
     /* This function is to generate input for different platforms. */
     std::string generateInputCommand(std::string const& input);
-    /* Following two functions generate input command for specific platform */
-    std::string generateWindowsInputCommand(std::string const& input);
-    std::string generateUnixInputCommand(std::string const& input);
+
 
     // todo 3 Luo Wenxiang
     // /* if use cmake, HH's cmake is poor, Luo will write this */ 
@@ -99,14 +123,14 @@ public:
 
     /* done!
        execute certain command in command line */
-    void executeInCmdLine(std::string cmd);
+    void executeInCmdLine(std::string const& cmd);
 
     /* already finished by Zhou */
-    std::string executeAndGetFromCmd(std::string cmd);
+    std::string executeAndGetFromCmd(std::string const& cmd);
 
 
     // sets
-    void set_address(std::string address) { address_ = address; }
+    void set_address(std::string const& address) { address_ = address; }
     void set_language(LanguageType language) { language_ = language; }
 
     // gets
@@ -117,7 +141,6 @@ public:
     /* use the above methods
        accept input and return output
        an overload function is needed for the user to specify the code to be run (addresss) */
-    std::string runCode(std::string input);
-    std::string runCode(std::string address, std::string input);
-
+    std::string runCode(std::string const& input);
+    std::string runCode(std::string const& address, std::string const& input);
 };
