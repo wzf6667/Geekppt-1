@@ -74,4 +74,4 @@ TBI by LWX, ZJW
 
 ## License
 
-TBI by ZQH
+Geekppt is released under the GPI-3.0 License. https://opensource.org/licenses/GPL-3.0
