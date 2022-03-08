@@ -19,7 +19,7 @@ TBI
 |need to install|functionality|
 |---------------|-------------|
 |```g++```|C++|
-|```java``` and ```javac```|Java|
+|```JDK```|Java|
 |```Python```|Python|
 |```Pandoc```|conversion to pptx file|
 
