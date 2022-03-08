@@ -749,7 +749,7 @@ namespace CodeEvaluation
             }
 
             // ensure added picture have a certain name
-            int count = 1;
+            count = 1;
             foreach (PowerPoint.Shape shape in slide.Shapes)
             {
                 if (!shapenameBeforeAddPic.Contains(shape.Name))
