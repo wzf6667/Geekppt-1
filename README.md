@@ -8,20 +8,22 @@ Prominent literate programming environments nowadays are Jupyter notebooks, Math
 
 In this project, we aim to build a ppt addin called ```Code Evaluation``` that helps quickly insert code output, such as print and pictures in ppt, and enable command line and table input. This addin also supports shortcut conversion from multiple types to pptx while preserving all fhe features above.
 
-## Dependencies
-
-TBI by 3 giants
-
 ## Installation
 
-TBI 3 giants
+TBI
 
 ## User Guide
 
-TBI by HH, ZQH, WZF
 ### Prerequisites
 
-TBI by WZF
+|need to install|functionality|
+|---------------|-------------|
+|```g++```|C++|
+|```java``` and ```javac```|Java|
+|```Python```|Python|
+|```Pandoc```|conversion to pptx file|
+
+PowerPoint 2016 or later. 
 
 ### Create codebox, click to execute
 
