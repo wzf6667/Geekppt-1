@@ -1,19 +1,18 @@
-# Create a VSTO project for PowerPoint Add-in
+# Content
 
-## Step One
+## I. VSTO Add-in
 
-Launch Visual Studio, select ```Create a new Project```, then select ```PowerPoint VSTO Add-in```, use ```.NET Framework 4.7.2```
+All the source files used to build this PowerPoint add-in is in ```Add-in``` folder. The steps for developing add-in code are shown in ```VSTO Add-in/README.md```.
 
-## Step Two
+## II. Unit tests
 
-In the tool bar, click ```Project``` -> ```Add Component``` -> ```Ribbon (Visual Designer)```, change name to ```Code.cs``` and click ```Add```.
+There are some other folders for unit test. For example, the source files for testing ```RGBColor``` are in ```RGBColorTest```. 
 
-## Step Three
+The folders for unit tests are listed below,
 
-Copy all the files (except ```README.md```) to project folder. Then in ```Solution Explorer```, right click the solution and select ```Add``` -> ```Existing Item...```, select ```Auxiliary.CodeEvaluation.cs```, ```Auxiliary.Naming.cs``` and ```Auxiliary.RGBColor.cs```.
+1. RGBColorTest
+2. CodeEvaluationCppTest
+3. CodeEvaluationJavaTest
+4. CodeEvaluationPythonTest
+5. AuxiliaryTest
 
-## Note
-
-Before closing Visual Studio, click ```Build``` -> ```Clean Solution```, otherwise the add-in will present in the PowerPoint.  
-
-test case ppt is in the test_case folder. Whenever a new features works, it is recommended to add a test slide. 
