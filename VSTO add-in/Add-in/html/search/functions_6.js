@@ -5,7 +5,7 @@ var searchData=
   ['generatecodeboxname_2',['GenerateCodeBoxName',['../class_code_evaluation_1_1_auxiliary.html#abae1004a8294bdd827da434fe63e327e',1,'CodeEvaluation::Auxiliary']]],
   ['generatecodeboxnameformd_3',['GenerateCodeBoxNameForMd',['../class_code_evaluation_1_1_auxiliary.html#ad877529ed526198fe09efb43463808df',1,'CodeEvaluation::Auxiliary']]],
   ['generatecodetablename_4',['GenerateCodeTableName',['../class_code_evaluation_1_1_auxiliary.html#a6d7f70990635b5e18d95477481e52730',1,'CodeEvaluation::Auxiliary']]],
-  ['generatecolor_5',['GenerateColor',['../class_code_evaluation_1_1_auxiliary.html#abd208af5afdafac4a8f9661028bfba48',1,'CodeEvaluation.Auxiliary.GenerateColor()'],['../class_code_evaluation_1_1_auxiliary.html#a660a054d8805482515812351e11582ab',1,'CodeEvaluation.Auxiliary.GenerateColor(ref RGBColor color)']]],
+  ['generatecolor_5',['GenerateColor',['../class_code_evaluation_1_1_auxiliary.html#abd208af5afdafac4a8f9661028bfba48',1,'CodeEvaluation.Auxiliary.GenerateColor()'],['../class_code_evaluation_1_1_auxiliary.html#a8c795ffafb43002fb451e4f297c90a6e',1,'CodeEvaluation.Auxiliary.GenerateColor(out RGBColor color)']]],
   ['generatefilename_6',['GenerateFilename',['../class_code_evaluation_1_1_auxiliary.html#a15ac507d7a6a4417fe1e6057f61d6312',1,'CodeEvaluation::Auxiliary']]],
   ['generateinputlist_7',['GenerateInputList',['../class_code_evaluation_1_1_auxiliary.html#a23539e7e239f4395403f0ec89b8589ae',1,'CodeEvaluation::Auxiliary']]],
   ['generaterandomname_8',['GenerateRandomName',['../class_code_evaluation_1_1_auxiliary.html#a25a6d3e5cb455fbb31be71539d7a967d',1,'CodeEvaluation::Auxiliary']]],

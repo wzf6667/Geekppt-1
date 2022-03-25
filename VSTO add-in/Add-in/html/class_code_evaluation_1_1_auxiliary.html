@@ -75,6 +75,9 @@ $(function() {
   <div class="headertitle"><div class="title">CodeEvaluation.Auxiliary Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>All the auxiliary methods are encapsulated in this class. The functionalities can be divided into three aspect, hangling color in PowerPoint, determing the naming of PowerPoint components and evaluating source codes.  
+ <a href="class_code_evaluation_1_1_auxiliary.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -90,6 +93,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2ebad6f15572aa23316f61a7adaf521e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the selected programming language, there should be only one language at the same time  <a href="class_code_evaluation_1_1_auxiliary.html#a2ebad6f15572aa23316f61a7adaf521e">More...</a><br /></td></tr>
 <tr class="separator:a2ebad6f15572aa23316f61a7adaf521e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23539e7e239f4395403f0ec89b8589ae"><td class="memItemLeft" align="right" valign="top">static List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_evaluation_1_1_auxiliary.html#a23539e7e239f4395403f0ec89b8589ae">GenerateInputList</a> (string input)</td></tr>
+<tr class="memdesc:a23539e7e239f4395403f0ec89b8589ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split the arguments in string format (separate by <br  />
+) to a list  <a href="class_code_evaluation_1_1_auxiliary.html#a23539e7e239f4395403f0ec89b8589ae">More...</a><br /></td></tr>
 <tr class="separator:a23539e7e239f4395403f0ec89b8589ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afade0222de9027baeaa030eba713876d"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_evaluation_1_1_auxiliary.html#afade0222de9027baeaa030eba713876d">GenerateTableInputList</a> (PowerPoint.Shape table, string bracketType)</td></tr>
 <tr class="separator:afade0222de9027baeaa030eba713876d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,8 +132,9 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a660a054d8805482515812351e11582ab"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_evaluation_1_1_auxiliary.html#a660a054d8805482515812351e11582ab">GenerateColor</a> (ref <a class="el" href="class_code_evaluation_1_1_r_g_b_color.html">RGBColor</a> color)</td></tr>
-<tr class="separator:a660a054d8805482515812351e11582ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c795ffafb43002fb451e4f297c90a6e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_evaluation_1_1_auxiliary.html#a8c795ffafb43002fb451e4f297c90a6e">GenerateColor</a> (out <a class="el" href="class_code_evaluation_1_1_r_g_b_color.html">RGBColor</a> color)</td></tr>
+<tr class="memdesc:a8c795ffafb43002fb451e4f297c90a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Randomly generate a new color and determine if it can be easily distinguish from existing color  <a href="class_code_evaluation_1_1_auxiliary.html#a8c795ffafb43002fb451e4f297c90a6e">More...</a><br /></td></tr>
+<tr class="separator:a8c795ffafb43002fb451e4f297c90a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -143,7 +149,9 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:a8dbb3b6fedf3336e2e884447b4e9e5a3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_evaluation_1_1_auxiliary.html#a8dbb3b6fedf3336e2e884447b4e9e5a3">MINIMUM_COLOR_DIFFERENCE</a> = 100</td></tr>
 <tr class="separator:a8dbb3b6fedf3336e2e884447b4e9e5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >All the auxiliary methods are encapsulated in this class. The functionalities can be divided into three aspect, hangling color in PowerPoint, determing the naming of PowerPoint components and evaluating source codes. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab0f1c2993c9607ead8abb30d2e87c7ea" name="ab0f1c2993c9607ead8abb30d2e87c7ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0f1c2993c9607ead8abb30d2e87c7ea">&#9670;&nbsp;</a></span>AddPicture()</h2>
 
@@ -266,7 +274,7 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The path of the new folder</dd></dl>
 
 </div>
 </div>
@@ -385,7 +393,7 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The name of the text (code) box in PowerPoint</dd></dl>
 
 </div>
 </div>
@@ -475,12 +483,12 @@ Static Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generate a color that can be easily distinguished </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The RGB color in hexadecmial</dd></dl>
 
 </div>
 </div>
-<a id="a660a054d8805482515812351e11582ab" name="a660a054d8805482515812351e11582ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a660a054d8805482515812351e11582ab">&#9670;&nbsp;</a></span>GenerateColor() <span class="overload">[2/2]</span></h2>
+<a id="a8c795ffafb43002fb451e4f297c90a6e" name="a8c795ffafb43002fb451e4f297c90a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c795ffafb43002fb451e4f297c90a6e">&#9670;&nbsp;</a></span>GenerateColor() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -491,7 +499,7 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">static bool CodeEvaluation.Auxiliary.GenerateColor </td>
           <td>(</td>
-          <td class="paramtype">ref <a class="el" href="class_code_evaluation_1_1_r_g_b_color.html">RGBColor</a>&#160;</td>
+          <td class="paramtype">out <a class="el" href="class_code_evaluation_1_1_r_g_b_color.html">RGBColor</a>&#160;</td>
           <td class="paramname"><em>color</em></td><td>)</td>
           <td></td>
         </tr>
@@ -502,6 +510,15 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Randomly generate a new color and determine if it can be easily distinguish from existing color </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>The new color</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the color can be istinguish (determine the color difference)</dd></dl>
 
 </div>
 </div>
@@ -554,7 +571,7 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The filename based on its specifications</dd></dl>
 
 </div>
 </div>
@@ -581,6 +598,16 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Split the arguments in string format (separate by <br  />
+) to a list </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A list of arguments</dd></dl>
 
 </div>
 </div>
@@ -807,7 +834,7 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True is only one language is selected, otherwise false</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if only one language is selected, otherwise false</dd></dl>
 
 </div>
 </div>
@@ -896,7 +923,7 @@ Static Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the program run successfully</dd></dl>
 
 </div>
 </div>

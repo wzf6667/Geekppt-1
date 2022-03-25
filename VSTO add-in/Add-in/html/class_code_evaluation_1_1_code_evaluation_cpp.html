@@ -76,21 +76,26 @@ $(function() {
   <div class="headertitle"><div class="title">CodeEvaluation.CodeEvaluationCpp Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Evaluate C++ source codes  
+ <a href="class_code_evaluation_1_1_code_evaluation_cpp.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CodeEvaluation.CodeEvaluationCpp:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_code_evaluation_1_1_code_evaluation_cpp.png" usemap="#CodeEvaluation.CodeEvaluationCpp_map" alt=""/>
   <map id="CodeEvaluation.CodeEvaluationCpp_map" name="CodeEvaluation.CodeEvaluationCpp_map">
-<area href="interface_code_evaluation_1_1_i_code_evaluation.html" alt="CodeEvaluation.ICodeEvaluation" shape="rect" coords="0,0,217,24"/>
+<area href="interface_code_evaluation_1_1_i_code_evaluation.html" title="Defines general methods for evaluate a programming language" alt="CodeEvaluation.ICodeEvaluation" shape="rect" coords="0,0,217,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a99c0626194d4142173c5e4f9215f55bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_evaluation_1_1_code_evaluation_cpp.html#a99c0626194d4142173c5e4f9215f55bf">CodeEvaluationCpp</a> (string <a class="el" href="class_code_evaluation_1_1_code_evaluation_cpp.html#a2a01d4d7b4e04832da3bff188da61793">mainFile</a>, List&lt; string &gt; <a class="el" href="class_code_evaluation_1_1_code_evaluation_cpp.html#a994fcb8bb8fef2ea00404d11a61aea62">textAddress</a>)</td></tr>
+<tr class="memdesc:a99c0626194d4142173c5e4f9215f55bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <a href="class_code_evaluation_1_1_code_evaluation_cpp.html#a99c0626194d4142173c5e4f9215f55bf">More...</a><br /></td></tr>
 <tr class="separator:a99c0626194d4142173c5e4f9215f55bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab130f50ead2fcff07922358bf371961b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_evaluation_1_1_code_evaluation_cpp.html#ab130f50ead2fcff07922358bf371961b">CreateSourceFile</a> ()</td></tr>
+<tr class="memdesc:ab130f50ead2fcff07922358bf371961b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a C++ source file base on the all the text files (concatenation)  <a href="class_code_evaluation_1_1_code_evaluation_cpp.html#ab130f50ead2fcff07922358bf371961b">More...</a><br /></td></tr>
 <tr class="separator:ab130f50ead2fcff07922358bf371961b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37cb89ce3e412a3db8f1c88e56d7a99f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_evaluation_1_1_code_evaluation_cpp.html#a37cb89ce3e412a3db8f1c88e56d7a99f">RunCode</a> (out string result, string cmdArgs=&quot;&quot;, string inputs=&quot;&quot;)</td></tr>
 <tr class="separator:a37cb89ce3e412a3db8f1c88e56d7a99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +136,9 @@ Static Private Attributes</h2></td></tr>
 <tr class="memitem:a76e78619f0c4e0f711b2fbf393670cfb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespace_code_evaluation.html#a2320d15310753a4c248438df6ff62231">Language</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_code_evaluation_1_1_code_evaluation_cpp.html#a76e78619f0c4e0f711b2fbf393670cfb">TYPE</a> = <a class="el" href="namespace_code_evaluation.html#a2320d15310753a4c248438df6ff62231a4c162442ef22c58f6f1e330e6b692c7e">Language.CPP</a></td></tr>
 <tr class="separator:a76e78619f0c4e0f711b2fbf393670cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Evaluate C++ source codes </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a99c0626194d4142173c5e4f9215f55bf" name="a99c0626194d4142173c5e4f9215f55bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99c0626194d4142173c5e4f9215f55bf">&#9670;&nbsp;</a></span>CodeEvaluationCpp()</h2>
 
@@ -165,6 +172,15 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructor </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mainFile</td><td>The path of the text file contains main function</td></tr>
+    <tr><td class="paramname">textAddress</td><td>A list of text files contains other C++ source files</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -217,6 +233,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Create a C++ source file base on the all the text files (concatenation) </p>
 
 <p>Implements <a class="el" href="interface_code_evaluation_1_1_i_code_evaluation.html#a99136ca42ee707cf6acff8dbdc00d90c">CodeEvaluation.ICodeEvaluation</a>.</p>
 
