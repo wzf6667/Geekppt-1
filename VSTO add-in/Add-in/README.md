@@ -14,6 +14,7 @@ Copy all the files (except ```README.md```) to project folder. Then in ```Soluti
 
 ## Note
 
-Before closing Visual Studio, click ```Build``` -> ```Clean Solution```, otherwise the add-in will present in the PowerPoint.  
+1. Before closing Visual Studio, click ```Build``` -> ```Clean Solution```, otherwise the add-in will present in the PowerPoint.  
 
-test case ppt is in the test_case folder. Whenever a new features works, it is recommended to add a test slide. 
+2. Test case ppt is in the test_case folder. Whenever a new features works, it is recommended to add a test slide.
+3. The documentation is in folder ```html```, use ```index.html``` to view the full version. 
