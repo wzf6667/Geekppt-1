@@ -6,15 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.IO;
-using CodeEvaluation;
 using PowerPoint = Microsoft.Office.Interop.PowerPoint;
 using System.Drawing;
-
 
 namespace CodeEvaluation
 {
     enum Language { CPP, Java, Python, Invalid };
 
+    /// <summary>
+    /// All the auxiliary methods are encapsulated in this class. 
+    /// The functionalities can be divided into three aspect, hangling color
+    /// in PowerPoint, determing the naming of PowerPoint components and evaluating
+    /// source codes.
+    /// </summary>
     partial class Auxiliary
     {
         public static string GenerateTextFile(string path, string code, Language type, bool isMain, int id)
@@ -56,15 +60,13 @@ namespace CodeEvaluation
             }
         }
 
-
-
         /// <summary>
         /// Create a new folder
         /// </summary>
         /// <param name="name">The name of the new folder</param>
         /// <param name="current">The path to create the folder</param>
         /// <param name="clear">Whether the folder should be cleared if it exists</param>
-        /// <returns></returns>
+        /// <returns>The path of the new folder</returns>
         public static string CreateFolder(string name, string current = "", bool clear = false)
         {
             string currentDirectory = current.Equals("") ? Directory.GetCurrentDirectory() : current;
@@ -99,7 +101,7 @@ namespace CodeEvaluation
         /// </summary>
         /// <param name="codes">A dictionary whose content is boxName:code (only box name is used)</param>
         /// <param name="type">The selected programming language, Language.Invalid is set if more than one languages are selected</param>
-        /// <returns>True is only one language is selected, otherwise false</returns>
+        /// <returns>True if only one language is selected, otherwise false</returns>
         public static bool ObtainLanguageType(Dictionary<string, string> codes, out Language type)
         {
             HashSet<Language> selectedType = new HashSet<Language>();
@@ -120,6 +122,11 @@ namespace CodeEvaluation
             return false;
         }
 
+        /// <summary>
+        /// Split the arguments in string format (separate by \n) to a list
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>A list of arguments</returns>
         public static List<string> GenerateInputList(string input)
         {
             List<string> commands = new List<string>();
@@ -200,7 +207,7 @@ namespace CodeEvaluation
         /// <param name="executable">The name of the program</param>
         /// <param name="args">The arguments of this program</param>
         /// <param name="inputs">The inputs of this program</param>
-        /// <returns></returns>
+        /// <returns>True if the program run successfully</returns>
         public static string RunProgram(string executable, string args = "", string inputs = "")
         {
             var process = new Process()
@@ -257,12 +264,18 @@ namespace CodeEvaluation
         }
     }
 
+    /// <summary>
+    /// Defines general methods for evaluate a programming language
+    /// </summary>
     public interface ICodeEvaluation
     {
         void CreateSourceFile();
         bool RunCode(out string result, string cmdArgs = "", string inputs = "");
     }
 
+    /// <summary>
+    /// Evaluate Java source codes
+    /// </summary>
     public class CodeEvaluationJava : ICodeEvaluation
     {
         private List<string> textAddress;
@@ -441,6 +454,9 @@ namespace CodeEvaluation
 
     }
 
+    /// <summary>
+    /// Evaluate C++ source codes
+    /// </summary>
     public class CodeEvaluationCpp : ICodeEvaluation
     {
         private List<string> textAddress;
@@ -464,6 +480,11 @@ namespace CodeEvaluation
             get => CODE_FOLDER;
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="mainFile">The path of the text file contains main function</param>
+        /// <param name="textAddress">A list of text files contains other C++ source files</param>
         public CodeEvaluationCpp(string mainFile, List<string> textAddress)
         {
             CODE_FOLDER = Auxiliary.CreateFolder(Auxiliary.GenerateRandomName(), Auxiliary.tempFolder, true);
@@ -472,6 +493,9 @@ namespace CodeEvaluation
             this.mainFile = mainFile;
         }
 
+        /// <summary>
+        /// Create a C++ source file base on the all the text files (concatenation)
+        /// </summary>
         public void CreateSourceFile()
         {
             string[] codeMain = File.ReadAllLines(MainFile);
@@ -560,6 +584,9 @@ namespace CodeEvaluation
         }
     }
 
+    /// <summary>
+    /// Evaluate Python source codes
+    /// </summary>
     public class CodeEvaluationPython : ICodeEvaluation
     {
         private List<string> textAddress;

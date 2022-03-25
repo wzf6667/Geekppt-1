@@ -18,7 +18,6 @@ namespace CodeEvaluation
 
         }
 
-
         private void cppMain_Click(object sender, RibbonControlEventArgs e)
         {
             string language = "C++ main";

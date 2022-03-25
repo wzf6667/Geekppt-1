@@ -15,18 +15,25 @@ namespace CodeEvaluation
         /// <summary>
         /// Generate a color that can be easily distinguished
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The RGB color in hexadecmial</returns>
         public static string GenerateColor()
         {
-            RGBColor color = new RGBColor(0, 0, 0);
-            while (!GenerateColor(ref color)) ;
+            RGBColor color;
+            while (!GenerateColor(out color)) ;
 
             return color.ToHexadecimal();
         }
 
-        private static bool GenerateColor(ref RGBColor color)
+        /// <summary>
+        /// Randomly generate a new color and determine if it can be easily 
+        /// distinguish from existing color
+        /// </summary>
+        /// <param name="color">The new color</param>
+        /// <returns>Whether the color can be istinguish (determine the color difference)</returns>
+        private static bool GenerateColor(out RGBColor color)
         {
             Random random = new Random();
+            color = new RGBColor(0, 0, 0);
             color.Red = random.Next(255);
             color.Green = random.Next(255); 
             color.Blue = random.Next(255); 
@@ -45,7 +52,7 @@ namespace CodeEvaluation
     /// <summary>
     /// Represent color in RGB format
     /// </summary>
-    class RGBColor
+    public class RGBColor
     {
         private int red;
         private int green;
@@ -111,14 +118,14 @@ namespace CodeEvaluation
         }
 
         /// <summary>
-        /// Default constructor
+        /// Default constructor, all the components are set to zero
         /// </summary>
         public RGBColor() : this(0, 0, 0) {}
 
         /// <summary>
         /// Convert the color in RGB fotmat to its hexadecimal representation
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A hexadecimal string represents the color</returns>
         public string ToHexadecimal()
         {
             return String.Format($"{Red:X02}{Green:X02}{Blue:X02}");
@@ -128,7 +135,7 @@ namespace CodeEvaluation
         /// Convert hexadecimal representation into RGB format
         /// </summary>
         /// <param name="color">String representation of the color(hexadecimal)</param>
-        /// <returns></returns>
+        /// <returns>A RGBColor object represents the hexadecimal</returns>
         public static RGBColor ToRGBColor(string color)
         {
             if (color.Length != 6)
@@ -148,7 +155,8 @@ namespace CodeEvaluation
         /// are too colose to each other so that they cannot be distinguished
         /// </summary>
         /// <param name="other">Another color in RGB format</param>
-        /// <returns></returns>
+        /// <returns>An integer represent the difference between two 
+        /// colors (larger value, larger difference)</returns>
         public int ColorDifference(RGBColor other)
         {
             return (int)(Math.Pow(Red - other.Red, 2) + Math.Pow(Green - other.Green, 2) + Math.Pow(Blue - other.Blue, 2));
@@ -158,7 +166,8 @@ namespace CodeEvaluation
         /// Determine the difference of two colors
         /// </summary>
         /// <param name="color">Another color in string representation(Hexadecimal)</param>
-        /// <returns></returns>
+        /// <returns>An integer represent the difference between two 
+        /// colors (larger value, larger difference)</returns>
         public int ColorDifference(string color)
         {
             RGBColor temp = ToRGBColor(color);

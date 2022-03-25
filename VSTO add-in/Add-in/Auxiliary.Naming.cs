@@ -15,14 +15,13 @@ namespace CodeEvaluation
         private static int tableID = 0;
         private static readonly Random rand = new Random();
 
-
         /// <summary>
         /// Generate text box name
         /// </summary>
         /// <param name="baseName">The user selection or name from other text boxes, for example, C++_main</param>
         /// <param name="content">The content of the text box</param>
         /// <param name="id">The ID of this text box, the internal value is used if no valus is provided</param>
-        /// <returns></returns>
+        /// <returns>The name of the text (code) box in PowerPoint</returns>
         public static string GenerateCodeBoxName(string baseName, BoxContent content, int? id = null)
         {
             string boxName = baseName.ToLower() + "_";
@@ -31,6 +30,7 @@ namespace CodeEvaluation
 
             return boxName;
         }
+
         public static string GenerateCodeTableName(int? id = null)
         {
             string tableName = "table";
@@ -117,7 +117,7 @@ namespace CodeEvaluation
         /// <param name="type">The programming language of the code</param>
         /// <param name="isMain">Whether the main function is in the file</param>
         /// <param name="id">The ID of the file</param>
-        /// <returns></returns>
+        /// <returns>The filename based on its specifications</returns>
         public static string GenerateFilename(Language type, bool isMain, int id)
         {
             if (type == Language.CPP)
