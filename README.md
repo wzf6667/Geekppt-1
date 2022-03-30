@@ -66,7 +66,7 @@ You can then select a parameter table and click the ```Plot Template``` button t
 
 ### conversion to ppt with codebox enabled
 
-TBI by WZF
+user firstly use pandoc to convert Markdown file to PowerPoint file. Then users can use ```Reformat``` button to remove all existing tags(users can also run code without reformating). After clicking the reformat button, users can run code by clicking ```evaluation``` button.
 
 ## Technical Documentation
 
