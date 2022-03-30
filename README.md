@@ -74,4 +74,4 @@ TBI by LWX, ZJW
 
 ## License
 
-Geekppt is released under the GPL-3.0 License. https://opensource.org/licenses/GPL-3.0
+Geekppt is released under the MIT License. https://opensource.org/licenses/MIT
